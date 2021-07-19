@@ -1,0 +1,18 @@
+/* Footer Start*/
+
+.footer {
+  // background: linear-gradient($color-lighter-gray, $color-black );
+  background: $color-black;
+  color: $color-white;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 5px 5px 10px 2px $color-black;
+
+  p {
+    color: $color-light-gray;
+  }
+}
+/*Footer End */

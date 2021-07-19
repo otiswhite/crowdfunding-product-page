@@ -1,0 +1,46 @@
+/* Config Start */
+
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;700&display=swap');
+$font-stack: 'Commissioner', Arial, Helvetica, sans-serif;
+
+// Colors
+$color-moderate-cyan: hsl(176, 50%, 47%);
+$color-dark-cyan: hsl(176, 50%, 28%);
+$color-black: hsl(0, 0%, 0%);
+$color-white: hsl(0, 0%, 100%);
+$color-dark-gray: hsl(0, 0%, 38%);
+$color-light-gray: hsl(0, 0%, 83%);
+$color-lighter-gray: hsl(0, 0%, 95%);
+$color-red: hsl(0, 100%, 50%);
+
+// Reset
+
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul, ol, li, a {
+  list-style: none;
+  text-decoration: none;
+  color: inherit;
+}
+
+a, li, button {
+  cursor: pointer;
+}
+
+// html {
+//   height: 100%;
+// }
+
+body {
+  font-family: $font-stack;
+  font-size: 16px;
+  background: $color-lighter-gray;
+  position: relative;
+}
+
+/* Config End */

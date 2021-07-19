@@ -1,0 +1,278 @@
+/* Main Start */
+
+.main {
+  margin: 0 1.5rem;
+  max-width: 750px;
+
+  @media(min-width: 768px) {
+    margin: 0 auto;
+  }
+}
+
+.product-header {
+
+}
+
+.top-container {
+  margin: 0;
+  padding-top: 0;
+  transform: translateY(-2rem);
+}
+
+.title {
+  text-align: center;
+  // margin: 0 2rem;
+
+  &__logo {
+    transform: translateY(-1.5rem);
+
+    img {
+      
+    }
+  }
+
+  &__title {
+  }
+
+  &__blurb {
+    margin: 1rem 0;
+    color: $color-dark-gray;
+  }
+}
+
+.controls {
+  text-align: center;
+  margin-top: 2rem;
+  // padding-bottom: 1.5rem;
+  display: flex;
+  justify-content: space-around;
+
+  @media(max-width:360px){
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  &__button-bookmark {
+    padding: none;
+    border: none;
+    background: none;
+    font: inherit;
+    font-weight: 500;
+
+    &:active {
+      transform: scale(0.97);
+    }
+
+    @media(min-width: 500px), (max-width: 360px){
+      padding: 1em 2em;
+      padding-left: 3em;
+      background: $color-lighter-gray;
+      color: $color-dark-gray;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5rem;
+      position: relative;
+      border-radius: 2rem;
+
+      &:hover {
+        background: $color-light-gray;
+        color: $color-black;
+      }
+    }
+
+    &__icon {
+      width: 50px;
+
+      color: red;
+
+      @media(min-width: 500px), (max-width: 360px){
+        display: inline-block;
+        position: absolute;
+        left: -5%;
+        display: flex;
+        justify-content: center;
+      }
+
+      img {
+        width: 100%;
+
+        @media(min-width: 500px){
+          
+        }
+
+      }
+    }
+
+    &__text {
+      display: none;
+
+      @media(min-width: 500px), (max-width: 360px){
+        display: unset;
+        transform: translateX(10%);
+      }
+
+    }
+  }
+}
+
+.stats {
+
+  &__nums {
+    text-align: center;
+
+    @media(min-width: 500px){
+      display: flex;
+      justify-content: center;
+    }
+
+    &__title {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      letter-spacing: 1.2px;
+
+      &__sub {
+        font-weight: normal;
+        color: $color-dark-gray;
+        display: block;
+        font-size: 0.9rem;
+        padding-top: 0.2rem;
+        letter-spacing: 0.1px;
+      }
+    }
+
+    &__line {
+      border-bottom: 1px solid $color-light-gray;
+      margin-bottom: 1rem;
+      width: 100px;
+      display: inline-block;
+
+      @media(min-width: 500px){
+        border-bottom: none;
+        border-right: 1px solid $color-light-gray;
+        width: 0px;
+        height: 50px;
+        margin: 0 3rem;
+      }
+    }
+  }
+
+  &__bar {
+    position: relative;
+
+    &__empty {
+      position: absolute;
+      background: $color-light-gray;
+      width: 100%;
+      height: 10px;
+      border-radius: 1rem;
+    }
+
+    &__completed {
+      position: absolute;
+      background: $color-moderate-cyan;
+      width: 89.914%;
+      height: 10px;
+      border-radius: 1rem;
+    }
+  }
+}
+
+.main.active {
+  opacity: 0.5;
+  overflow: hidden;
+
+  & .container {
+    background: $color-lighter-gray;
+  }
+
+  & .title__logo {
+  }
+}
+
+.product__pledge {}
+
+.pledge {
+
+
+  &__about {
+
+    &__title {}
+
+    &__blurb {
+      padding: 1rem 0;
+      color: $color-dark-gray;
+
+      &-new-paragraph {
+        color: $color-dark-gray;
+      }
+    }
+  }
+}
+
+.pledge__one {
+  margin: 2rem 0;
+  border: 1px solid $color-light-gray;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  padding-bottom: 1.5rem;
+  box-shadow:
+    0 0.5px 0.9px rgba(0, 0, 0, 0.024),
+    0 1.3px 2.5px rgba(0, 0, 0, 0.035);
+
+  &__title {
+
+    @media(min-width: 768px){
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__sub {
+      display: block;
+      color: $color-moderate-cyan;
+      font-weight: 500;
+      font-size: 1.1rem;
+      padding: 0.3rem 0;
+
+      @media(min-width: 768px){
+        display: inline-block;
+        padding-right: 1rem;
+      }
+    }
+  }
+
+  &__blurb {
+    color: $color-dark-gray;
+    padding: 1rem 0;
+  }
+
+  &__cta {
+
+    @media(min-width: 500px){
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &__left {
+      font-weight: 600;
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+
+      @media(min-width: 500px){
+        margin-bottom: 0;
+      }
+
+      &__sub {
+        font-weight: 400;
+        color: $color-dark-gray;
+        font-size: 0.9rem;
+        padding-left: 0.5rem;
+      }
+    }
+
+  }
+}
+
+/* Main End */

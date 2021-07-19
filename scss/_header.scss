@@ -1,0 +1,154 @@
+
+/* Header Start */
+
+.header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0) 40%), url(../images/image-hero-mobile.jpg);
+  background-position-y: 70%;
+  background-size: cover;
+  height: 375px;
+  width: 100%;
+  overflow: hidden;
+  display: block;
+
+  &.active {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.6)), url(../images/image-hero-mobile.jpg);
+  }
+
+  @media(min-width: 768px){
+    background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0) 30%), url(../images/image-hero-desktop.jpg);
+  }
+
+  &__container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+
+    @media(min-width: 768px){
+      padding: 2.5rem
+    }
+  }
+
+  &__logo {
+
+    img {
+      
+    }
+  }
+
+  &__hamburger {
+    background: none;
+    border: none;
+
+    &:focus {
+      outline-color: $color-moderate-cyan;
+    }
+
+    @media(min-width: 768px){
+      display: none;
+    }
+
+    &__bar {
+      display: block;
+      width: 25px;
+      height: 3px;
+      margin: 5px auto;
+      transition: all 0.3s ease-in-out;
+      background-color: $color-white;
+    }
+
+    &.active .two{
+      opacity: 0;
+    }
+
+    &.active .three {
+      transform: translateY(-8px) rotate(45deg);
+    }
+
+    &.active .one{
+      transform: translateY(8px) rotate(-45deg);
+    }
+
+    &.active ~ .header__navbar {
+      position: absolute;
+      top: 4rem;
+      left: 5%;
+      width: 90%;
+      display: flex;
+      flex-direction: column;
+      background: $color-white;
+      border-radius: 0.75rem;
+      font-size: 1.2rem;
+
+      @media(min-width: 768px){
+        all: unset;
+      }
+      
+      .header__navbar__link {
+        padding: 1rem 2rem;
+        border-bottom:1px solid $color-light-gray;
+        text-align: center;
+        outline: none;
+
+        &:nth-child(3) {
+          border-bottom: none;
+        }
+
+        &:focus {
+          outline: none;
+          color: $color-moderate-cyan;
+          transition: color 400ms;
+        }
+
+        @media(min-width: 768px){
+          border-bottom: unset;
+          color: $color-white;
+
+          &:focus {
+            outline: none;
+            color: $color-moderate-cyan;
+            transition: color 400ms;
+          }
+
+          &:hover {
+            color: $color-moderate-cyan;
+            transition: color 400ms;
+          }
+        }
+      }
+    }
+  }
+
+  &__navbar {
+    display: none;
+
+    @media(min-width: 768px){
+      display: block;
+      color: $color-white;
+    }
+
+    &__link {
+
+      @media(min-width: 768px){
+        padding: 0 1rem;
+
+        &:focus {
+          outline: none;
+          color: $color-moderate-cyan;
+          transition: color 400ms;
+        }
+
+        &:hover {
+          color: $color-moderate-cyan;
+          transition: color 400ms;
+        }
+      }
+    }
+  }
+}
+
+/* Header End */
