@@ -15,7 +15,7 @@ Users should be able to:
 
 ### Screenshot
 
-![Mobile Screenshot](.screenshots/screenshot-mobile.jpg)
+![Mobile Screenshot](./screenshots/screenshot-mobile.jpg)
 
 ### Built with
 
